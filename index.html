@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<div id="header">
+     <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+             <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>    
+             </ul>
+        </nav>
+               
+    <div class="header-text">
+                <p>Student</p>
+                <h1>Hi, I'm <span>Hajar El Karkouri</span><br> From Casablanca  </h1>
+            </div>
+        </div>
+    </div>
+    <!-- ---------about--------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Student in Casablanca, 17 years old, I have a huge passion for science, physics,mathematics and also for IT . I always seek to develop my skills and my curiosity over time by seeking
+                         to continually learn in order to be an adequate and autonomous person. With a great capacity of organization and discipline.I am determined and motivated to achieve my goals at 
+                         all costs.
+                    </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li>Public Speaking</li>
+                        <li>Writing </li>
+                        <li>Communication</li>
+                        <li>Problem-solving</li>
+                        <li>Leadership</li>
+                        <li>Active Listening</li>
+                        <li>Positive attitude</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2009-2017</span><br>Chems School</li>
+                        <li><span>2017-2018</span><br>Maurice-Bucaille School</li>
+                        <li><span>2018-2019</span><br>Charles-Nicolle School</li>
+                        <li><span>2019-2021</span><br>Alexandre School</li>
+                        <li><span>2021-2023</span><br>Kaizen School</li>
+                    </ul>
+                </div>
+            </div> 
+         </div>
+        </div>
+    </div>
+    <!-- ---------portfolio--------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title"> My Achieves</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" >
+                    <div class="layer">
+                        <h3>Student at GomyCode's Summer Academy of Web Development</h3>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" >
+                    <div class="layer">
+                        <h3>Finalist of the National Entrepreneurship Competition</h3>
+                        <p>Here is our Business Idea project's link :</p>
+                        <a href="https://drive.google.com/file/d/1AHHQfCG2TkLH7lViWWEQtbp6ExgqEpe7/view?usp=sharing" target=_blank><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" >
+                    <div class="layer">
+                        <h3>Participant in a volunteer compaign for orphans in Casablanca</h3>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    <!-- ---------Contact--------- -->
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>  hajarelk2000@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>  0656403172</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form >
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="You Email" required>
+                        <textarea name="Message" rows="6" cols="30" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2"> Submit </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+
+    
+        <div class="copyright"><p>Copyright Hajar.Made with <i class="fa-solid fa-heart"></i></p>
+        </div>
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+    
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+    
+        </script>
+</body>
+</html>
